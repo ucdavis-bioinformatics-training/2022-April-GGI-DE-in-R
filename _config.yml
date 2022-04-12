@@ -18,5 +18,6 @@ navigation:
   - title: Enrichment Analysis
   - url: data_analysis/enrichment_with_quizzes_fixed
   
+  - heading: Upcoming
   - title: Upcoming Bioinformatics Core Courses
   - url: base/courses
