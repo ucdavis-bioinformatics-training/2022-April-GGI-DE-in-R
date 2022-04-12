@@ -17,3 +17,6 @@ navigation:
   - url: DE
   - title: Enrichment Analysis
   - url: enrichment
+  
+  - heading: Upcoming Bioinformatics Core Courses
+  - url: https://registration.genomecenter.ucdavis.edu/events/organizer/bioinformatics_core/
