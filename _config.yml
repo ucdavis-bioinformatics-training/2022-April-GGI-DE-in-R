@@ -16,7 +16,7 @@ navigation:
   - title: Differential Expression
   - url: DE
   - title: Enrichment Analysis
-  - url: enrichment
+  - url: data_analysis/enrichment_with_quizzes_fixed
   
   - title: Upcoming Bioinformatics Core Courses
   - url: base/courses
