@@ -11,3 +11,9 @@ navigation:
     url: preliminaries/before
   - title: File downloads
     url: preliminaries/download
+    
+  - heading: Data Analysis
+  - title: Differential Expression
+  - url: DE
+  - title: Enrichment Analysis
+  - url: enrichment
