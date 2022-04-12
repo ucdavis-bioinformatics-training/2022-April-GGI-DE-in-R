@@ -8,6 +8,6 @@ navigation:
 
   - heading: Preliminaries
   - title: Before the course
-    url: preliminaries/before.md
+    url: preliminaries/before
   - title: File downloads
     url: examples
