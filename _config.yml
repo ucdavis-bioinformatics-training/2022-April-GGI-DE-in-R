@@ -6,8 +6,8 @@ navigation:
   - title: Home
     url: /
 
-  - heading: Introduction
-  - title: Intro to the Workshop and Core
+  - heading: Preliminaries
+  - title: Before the course
     url: welcome
-  - title: Examples of Markdown Formatting
+  - title: File downloads
     url: examples
