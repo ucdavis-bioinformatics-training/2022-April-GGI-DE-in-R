@@ -1,5 +1,3 @@
-All documentation for the workshop is best viewed from the github.io pages
-
-[Documentation](https://ucdavis-bioinformatics-training.github.io/ucdavis-bioinformatics-training_template/)
+Welcome to the April 2022 course on differential expression and enrichment analysis in R for GGI graduate students.
 
 
