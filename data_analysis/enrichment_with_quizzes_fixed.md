@@ -86,19 +86,111 @@ function showResults(myq, qc, rc){
 Load libraries
 
 ```r
-suppressPackageStartupMessages(library(topGO))
+library(topGO)
 ```
 
+<div class='r_output'> Loading required package: BiocGenerics
+</div>
+<div class='r_output'> 
+ Attaching package: 'BiocGenerics'
+</div>
+<div class='r_output'> The following objects are masked from 'package:stats':
+ 
+     IQR, mad, sd, var, xtabs
+</div>
+<div class='r_output'> The following objects are masked from 'package:base':
+ 
+     anyDuplicated, append, as.data.frame, basename, cbind, colnames,
+     dirname, do.call, duplicated, eval, evalq, Filter, Find, get, grep,
+     grepl, intersect, is.unsorted, lapply, Map, mapply, match, mget,
+     order, paste, pmax, pmax.int, pmin, pmin.int, Position, rank,
+     rbind, Reduce, rownames, sapply, setdiff, sort, table, tapply,
+     union, unique, unsplit, which.max, which.min
+</div>
+<div class='r_output'> Loading required package: graph
+</div>
+<div class='r_output'> Loading required package: Biobase
+</div>
+<div class='r_output'> Welcome to Bioconductor
+ 
+     Vignettes contain introductory material; view with
+     'browseVignettes()'. To cite Bioconductor, see
+     'citation("Biobase")', and for packages 'citation("pkgname")'.
+</div>
+<div class='r_output'> Loading required package: GO.db
+</div>
+<div class='r_output'> Loading required package: AnnotationDbi
+</div>
+<div class='r_output'> Loading required package: stats4
+</div>
+<div class='r_output'> Loading required package: IRanges
+</div>
+<div class='r_output'> Loading required package: S4Vectors
+</div>
+<div class='r_output'> 
+ Attaching package: 'S4Vectors'
+</div>
+<div class='r_output'> The following objects are masked from 'package:base':
+ 
+     expand.grid, I, unname
+</div>
+<div class='r_output'> 
+ Attaching package: 'IRanges'
+</div>
+<div class='r_output'> The following object is masked from 'package:grDevices':
+ 
+     windows
+</div>
+<div class='r_output'> 
+</div>
+<div class='r_output'> Loading required package: SparseM
+</div>
+<div class='r_output'> 
+ Attaching package: 'SparseM'
+</div>
+<div class='r_output'> The following object is masked from 'package:base':
+ 
+     backsolve
+</div>
 <div class='r_output'> 
  groupGOTerms: 	GOBPTerm, GOMFTerm, GOCCTerm environments built.
 </div>
+<div class='r_output'> 
+ Attaching package: 'topGO'
+</div>
+<div class='r_output'> The following object is masked from 'package:IRanges':
+ 
+     members
+</div>
 ```r
-suppressPackageStartupMessages(library(KEGGREST))
-suppressPackageStartupMessages(library(org.Mm.eg.db))
-suppressPackageStartupMessages(library(pathview))
+library(KEGGREST)
+library(org.Mm.eg.db)
 ```
 
-Files for examples created in the DE analysis
+<div class='r_output'> 
+</div>
+```r
+library(pathview)
+```
+
+<div class='r_output'> 
+</div>
+<div class='r_output'> 
+ Pathview is an open source software package distributed under GNU General
+ Public License version 3 (GPLv3). Details of GPLv3 is available at
+ http://www.gnu.org/licenses/gpl-3.0.html. Particullary, users are required to
+ formally cite the original Pathview paper (not just mention it) in publications
+ or products. For details, do citation("pathview") within R.
+ 
+ The pathview downloads and uses KEGG data. Non-academic uses may require a KEGG
+ license agreement (details at http://www.kegg.jp/kegg/legal.html).
+ 
+</div>
+If you did not create the file naive_v_memory.txt as part of the DE analysis, you can download it by running this code:
+
+```r
+download.file("https://raw.githubusercontent.com/ucdavis-bioinformatics-training/2022-April-GGI-DE-in-R/master/data_analysis/naive_v_memory.txt", file.path(getwd(), "naive_v_memory.txt"))
+```
 
 ## Gene Ontology (GO) Enrichment
 
@@ -310,7 +402,7 @@ lines(xx, ecdf.out(xx), col = "black", lwd = 2)
 legend("bottomright", legend = c("Genes Annotated with 'generation of neurons'", "Other genes'"), lwd = 2, col = 2:1, cex = 0.9)
 ```
 
-![](enrichment_with_quizzes_files/figure-html/unnamed-chunk-5-1.png)<!-- -->
+![](enrichment_with_quizzes_files/figure-html/unnamed-chunk-6-1.png)<!-- -->
 
 versus the probability distributions of p-values that are and that are not annotated with the term GO:0007052 "mitotic spindle organization" (103 genes) p-value 2.5x10-5.
 
@@ -328,7 +420,7 @@ lines(xx, ecdf.out(xx), col = "black", lwd = 2)
 legend("bottomright", legend = c("Genes Annotated with 'mitotic spindle organization'", "Other genes"), lwd = 2, col = 2:1, cex = 0.9)
 ```
 
-![](enrichment_with_quizzes_files/figure-html/unnamed-chunk-6-1.png)<!-- -->
+![](enrichment_with_quizzes_files/figure-html/unnamed-chunk-7-1.png)<!-- -->
 
 
 We can use the function showSigOfNodes to plot the GO graph for the most significant term and its parents, color coded by enrichment p-value (red is most significant):
@@ -338,7 +430,7 @@ par(cex = 0.3)
 showSigOfNodes(GOdata, score(resultKS), firstSigNodes = 1, useInfo = "def")
 ```
 
-![](enrichment_with_quizzes_files/figure-html/unnamed-chunk-7-1.png)<!-- -->
+![](enrichment_with_quizzes_files/figure-html/unnamed-chunk-8-1.png)<!-- -->
 
 <div class='r_output'> $dag
  A graphNEL graph with directed edges
