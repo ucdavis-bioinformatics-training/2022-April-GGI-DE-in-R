@@ -10,4 +10,4 @@ navigation:
   - title: Before the course
     url: preliminaries/before
   - title: File downloads
-    url: examples
+    url: preliminaries/download
