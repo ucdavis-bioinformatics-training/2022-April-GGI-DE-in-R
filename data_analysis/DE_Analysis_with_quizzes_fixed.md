@@ -134,7 +134,7 @@ The data used in the example are from [Kurtulus et al.](https://www.ncbi.nlm.nih
 
 * CD62L-Slamf7hiCX3CR1- ("memory precursor like"), 5 samples
 
-* CD62L-Slamf7hiCX3CR1+ ("effector like), 3 samples
+* CD62L-Slamf7hiCX3CR1+ ("effector like"), 3 samples
 
 * CD62LhiSlamf7-CX3CR1- ("naive like"), 6 samples
 
