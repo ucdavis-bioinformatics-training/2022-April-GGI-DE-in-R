@@ -15,10 +15,11 @@ Note: There are multiple ways of doing just about anything in R, the code shown 
 * Is the sample with the largest normalization factor the sample with the smallest total counts?: `rownames(d0$samples)[which.min(d0$samples$lib.size)] == rownames(d0$samples)[which.max(d0$samples$norm.factors)]`
 * Make an MDS plot of the unfiltered data.: `plotMDS(d0, col = as.numeric(factor(metadata$simplified_cell_type)))`
 
-### Quiz 3
+#### Quiz 3
 * Based on the above model, how many genes are significantly differentially expressed between naive-like and memory-like?: `length(which(top.table$adj.P.Val < 0.05))`
 * Based on the above model, and without taking significance into account, how many genes have higher expression in naive-like than in memory-like?: `length(which(top.table$logFC > 0))`
-* 
+* How many genes have an _unadjusted_ p-value less than 0.05 for the comparison of naive to memory-like in the above model?: `length(which(top.table$P.Value < 0.05))`
+* What is the adjusted p-value for the last gene with unadjusted P < 0.05?: `top.table$adj.P.Val[max(which(top.table$P.Value < 0.05))]`
 
 ### Enrichment
 
